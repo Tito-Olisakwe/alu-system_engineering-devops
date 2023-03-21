@@ -11,13 +11,13 @@ sudo mkdir /etc/nginx/html
 sudo touch /etc/nginx/html/index.html
 echo "Holberton School" | sudo tee /etc/nginx/html/index.html
 
-sudo printf %s "server {
+printf %s "server {
      listen      80 default_server;
      listen      [::]:80 default_server;
      root        /etc/nginx/html;
      index       index.html index.htm;
 }
-" > /etc/nginx/sites-available/default
+" | sudo tee /etc/nginx/sites-available/default
 
 # Restart nginx
 sudo service nginx restart
