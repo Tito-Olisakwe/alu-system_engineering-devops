@@ -5,15 +5,13 @@
 sudo apt-get update
 
 # Install nginx
-sudo apt-get install -y nginx 
+sudo apt-get install nginx -y
 
-mkdir /etc/nginx/html
+sudo mkdir /etc/nginx/html
+sudo touch /etc/nginx/html/index.html
+echo "Holberton School" | sudo tee /etc/nginx/html/index.html
 
-touch /etc/nginx/html/index.html
-
-echo "Holberton School" > /etc/nginx/html/index.html
-
-printf %s "server {
+sudo printf %s "server {
      listen      80 default_server;
      listen      [::]:80 default_server;
      root        /etc/nginx/html;
