@@ -5,7 +5,7 @@
 sudo apt-get update
 
 # Install nginx
-sudo apt-get install nginx -y
+sudo apt-get install -y nginx 
 
 mkdir /etc/nginx/html
 
