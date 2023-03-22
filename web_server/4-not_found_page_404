@@ -21,7 +21,7 @@ echo "<!DOCTYPE html>
   <h1>404 Not Found</h1>
   <p>Ceci n'est pas une page</p>
 </body>
-</html>" | sudo tee /var/www/html/404.html >/dev/null
+</html>" | sudo tee /etc/nginx/html/404.html >/dev/null
 printf %s "server {
      listen      80 default_server;
      listen      [::]:80 default_server;
