@@ -7,9 +7,10 @@ apt-get install -y nginx
 mkdir /etc/nginx/html
 
 touch /etc/nginx/html/index.html
-
-
 echo "Holberton School" > /etc/nginx/html/index.html
+
+touch /etc/nginx/html/404.html
+echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
 
 # Create custom 404 error page
 echo "<!DOCTYPE html>
@@ -21,7 +22,7 @@ echo "<!DOCTYPE html>
   <h1>404 Not Found</h1>
   <p>Ceci n'est pas une page</p>
 </body>
-</html>" | sudo tee /var/www/html/404.html >/dev/null
+</html>" | sudo tee /etc/nginx/html/404.html >/dev/null
 printf %s "server {
      listen      80 default_server;
      listen      [::]:80 default_server;
