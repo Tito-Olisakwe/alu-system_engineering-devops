@@ -17,7 +17,7 @@ printf %s "server {
      root        /etc/nginx/html;
      index       index.html index.htm;
 }
-" | sudo tee /etc/nginx/sites-available/default
+" > /etc/nginx/sites-available/default
 
 # Restart nginx
 sudo service nginx restart
